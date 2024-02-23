@@ -1,16 +1,90 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dog Adoption Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="submit"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="checkbox"] {
+      margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <form action="#" method="POST">
+    <h2>Dog Adoption Application</h2>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    
+    <label for="phone">Phone Number</label>
+    <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+    
+    <label for="address">Address</label>
+    <input type="text" id="address" name="address" placeholder="Enter your address" required>
 
+    <label for="experience">Have you ever lived with a Dog before?</label>
+    <input type="checkbox" id="experience" name="experience" value="Have you ever lived with a Dog before?" required>
+
+    <label for="breeds">Please select your preferred breeds</label>
+    <select id="breeds" name="breeds[]" multiple required>
+      <option value="Golden Retriever">Golden Retriever</option>
+      <option value="Labrador Retriever">Labrador Retriever</option>
+      <option value="German Shepherd">German Shepherd</option>
+      <option value="Beagle">Beagle</option>
+      <option value="Poodle">Poodle</option>
+      <option value="Bulldog">Bulldog</option>
+    </select>
+
+    <input type="submit" value="Submit">
+  </form>
 </body>
-
 </html>
